@@ -61,19 +61,19 @@ body {
 .worldCanvas {
     position: relative;
     /* border: 2px solid var(--color_2); */
-    /* image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
-    image-rendering: crisp-edges; */
+    image-rendering: crisp-edges;
 }
 
 .moonCanvas {
     position: absolute;
     /* border: 2px solid var(--color_2); */
-    /* image-rendering: -moz-crisp-edges;
+    image-rendering: -moz-crisp-edges;
     image-rendering: -webkit-crisp-edges;
     image-rendering: pixelated;
-    image-rendering: crisp-edges; */
+    image-rendering: crisp-edges;
 }
 
 .row {

@@ -1,4 +1,4 @@
-# Day & Night
+## Celestial Visualization
 
 code for make:
 ```

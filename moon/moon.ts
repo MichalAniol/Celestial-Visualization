@@ -13,9 +13,6 @@
     img.src = moonData
     ctx.drawImage(img, 0, 0)
 
-    // const pixel = ctx.getImageData(300, 300, 2, 2).data
-    // console.log('%c pixel:', 'background: #ffcc00; color: #003300', pixel)
-
     const moonDataElem = document.getElementById('moonData')
     const moonRowLengthElem = document.getElementById('moonRowLength')
     const moonRowStartElem = document.getElementById('moonRowStart')
@@ -74,14 +71,9 @@
             }
 
             data.push(rowData)
-            // moonDataElem.innerHTML += `[${imgInner}]${y < TAB_Y - SCALE - DELTA ? ',<br>' : ']'}`
             moonRowLengthElem.innerHTML += `${rowLength}${y < TAB_Y - SCALE - DELTA ? ',' : ']'}`
             moonRowStartElem.innerHTML += `${imgRowStart}${y < TAB_Y - SCALE - DELTA ? ',' : ']'}`
-            console.log('%c rowLength:', 'background: #ffcc00; color: #003300', rowLength)
         }
-
-        console.log('%c minColor:', 'background: #ffcc00; color: #003300', minColor)
-        console.log('%c maxColor:', 'background: #ffcc00; color: #003300', maxColor)
 
         const ratio = 255 / (maxColor - minColor)
         const getStretched = (value: number) => Math.floor((value - minColor) * ratio)
@@ -100,8 +92,5 @@
             }
             moonDataElem.innerHTML += `[${imgInner}]${y < data.length - 1 ? ',<br>' : ']'}`
         }
-
-        console.log('%c newMax:', 'background: #ffcc00; color: #003300', newMax)
-        console.log('%c newMin:', 'background: #ffcc00; color: #003300', newMin)
     }, 1500);
 }())

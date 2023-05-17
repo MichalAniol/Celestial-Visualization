@@ -8,8 +8,6 @@ https://github.com/mourner/suncalc
 const SunCalc = (function () {
     'use strict';
 
-    // shortcuts for easier to read formulas
-
     const PI = Math.PI,
         sin = Math.sin,
         cos = Math.cos,
@@ -430,7 +428,6 @@ type ColorsT = {
         worldCanvas.style.height = (world.height * scale) + 'px'
         worldCanvas.style.left = (SPREAD * scale) + 'px'
 
-        // const worldPos = worldCanvas.getBoundingClientRect()
         moonCanvas.width = moon.width
         moonCanvas.height = moon.height
         moonCanvas.style.width = (moon.width * scale) + 'px'
@@ -468,11 +465,9 @@ type ColorsT = {
 
         const sunTimesElem = document.getElementById('sunTimes')
         sunTimesElem.style.left = BODY_BORDER + ((world.width + SPREAD + SPREAD) * scale) + 'px'
-        // sunTimesElem.style.top = 0 + 'px'
 
         const moonTimesElem = document.getElementById('moonTimes')
         moonTimesElem.style.left = BODY_BORDER + 'px'
-        // moonTimesElem.style.top = 0 + 'px'
     }
 
     const worldHeight = world.rowsLength.length
@@ -526,9 +521,6 @@ type ColorsT = {
         }
 
         worldContext.putImageData(worldImageData, 0, 0)
-
-
-        console.log('%c przeliczono światło ', 'background: #ffcc00; color: #003300', getTime(now))
     }
 
     const moonHeight = moon.rowsLength.length
@@ -610,7 +602,7 @@ type ColorsT = {
         if (scale === 1) {
             scale = window.innerWidth / (BODY_BORDER + SPREAD + world.width + SPREAD + BODY_BORDER)
             celestialAnimationElem.style.height = (world.height * scale) + 'px'
-            celestialAnimationElem.style.top = ((window.innerHeight - BODY_BORDER  - (world.height * scale)) / 2) + 'px'
+            celestialAnimationElem.style.top = ((window.innerHeight - BODY_BORDER - (world.height * scale)) / 2) + 'px'
             redraw()
         } else {
             scale = 1
@@ -655,8 +647,4 @@ type ColorsT = {
     //     drawMoon(newDate)
     //     ++moonIndex
     // }, 100)
-
-
-
-
 }())

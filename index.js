@@ -684,7 +684,6 @@ const SunCalc = (function () {
             }
         }
         worldContext.putImageData(worldImageData, 0, 0);
-        console.log('%c przeliczono światło ', 'background: #ffcc00; color: #003300', getTime(now));
     };
     const moonHeight = moon.rowsLength.length;
     const drawMoon = (now) => {
