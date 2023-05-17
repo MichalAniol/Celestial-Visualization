@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    src: url('font/Rubik-Regular.eot');
+    src: local('open sans extralight'), local('open-sans-extralight'), url('font/Rubik-Regular.eot?#iefix') format('embedded-opentype'), url('font/Rubik-Regular.woff2') format('woff2'), url('font/Rubik-Regular.woff') format('woff'), url('font/Rubik-Regular.ttf') format('truetype'), url('font/Rubik-Regular.svg#Barlow') format('svg');
+}
+
+:root {
+    --font: 'Rubik', sans-serif
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --prime-color: #126612;
+        --second-color: #123312;
+        --background-color: #121212;
+        --outline-color: red;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --prime-color: #006600;
+        --second-color: #87c487;
+        --background-color: #cfcfcf;
+        --outline-color: red;
+    }
+}
+
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--outline-color);
+    outline-offset: 0px;
+}
+
+:root {
+    --color_1: #006600;
+    --color_2: #001600;
+    --color_3: #000800;
+    --color_back: black;
+    --anim_col: #085c08;
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+#celestialAnimation {
+    position: relative;
+}
+
+.worldCanvas {
+    position: relative;
+    /* border: 2px solid var(--color_2); */
+    /* image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges; */
+}
+
+.moonCanvas {
+    position: absolute;
+    /* border: 2px solid var(--color_2); */
+    /* image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges; */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.celestialData {
+    margin-bottom: 3px;
+}
+
+.sunTimes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-end;
+    top: 0;
+}
+
+.moonTimes {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: flex-start;
+    transform-origin: 0 0;
+    top: 0;
+}
+
+.sunData {
+    margin-bottom: 3px;
+    width: min-content;
+}
+
+.celestialIcon {
+    filter: drop-shadow(0px 0px 4px rgb(0 0 0 / 1));
+}
+
+.celestialTime {
+    color: var(--anim_col);
+    font-size: 20px;
+    margin: 5px 7px 0 7px;
+    text-shadow: 0px 0px 4px #000;
+}
+
+
+.timer {
+    position: absolute;
+    color: var(--anim_col);
+    text-shadow: 0px 0px 4px #000;
+}

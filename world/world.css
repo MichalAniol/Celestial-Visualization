@@ -1,0 +1,33 @@
+:root {
+    --color_1: #006600;
+    --color_2: #001600;
+    --color_3: #000800;
+    --color_back: black;
+    --font: 'Georgia', sans-serif
+}
+
+body {
+    margin: 10px;
+    padding: 0;
+    background-color: var(--color_back);
+    color: var(--color_1);
+    font-family: var(--font);
+    font-size: 20px;
+}
+
+.canvas {
+    border: 20px ridge rgba(211, 220, 50, .6);
+}
+
+.pixelated {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -webkit-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+img {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    color: #2658b6;
+}
